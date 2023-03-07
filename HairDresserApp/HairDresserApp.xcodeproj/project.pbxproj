@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB78446829B6458F0094C425 /* HairDresserAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78446729B6458F0094C425 /* HairDresserAppApp.swift */; };
+		AB78446A29B6458F0094C425 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78446929B6458F0094C425 /* ContentView.swift */; };
+		AB78446C29B645910094C425 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB78446B29B645910094C425 /* Assets.xcassets */; };
+		AB78446F29B645910094C425 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB78446E29B645910094C425 /* Preview Assets.xcassets */; };
+		AB78447C29B645B80094C425 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78447829B645B80094C425 /* MainTabView.swift */; };
+		AB78447D29B645B80094C425 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78447929B645B80094C425 /* SearchResultView.swift */; };
+		AB78447E29B645B80094C425 /* SalonDirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78447A29B645B80094C425 /* SalonDirectoryView.swift */; };
+		AB78447F29B645B80094C425 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78447B29B645B80094C425 /* CheckInView.swift */; };
+		AB78448229B6478F0094C425 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78448129B6478F0094C425 /* ProfileView.swift */; };
+		AB78448529B6E4860094C425 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78448429B6E4860094C425 /* AuthenticationViewModel.swift */; };
+		AB78448829B6E6310094C425 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB78448729B6E6310094C425 /* FirebaseAuth */; };
+		AB78448A29B6E6310094C425 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AB78448929B6E6310094C425 /* FirebaseDatabase */; };
+		AB78448C29B6E6310094C425 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB78448B29B6E6310094C425 /* FirebaseDatabaseSwift */; };
+		AB78448E29B6E6310094C425 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AB78448D29B6E6310094C425 /* FirebaseFirestore */; };
+		AB78449029B6E6310094C425 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB78448F29B6E6310094C425 /* FirebaseFirestoreSwift */; };
+		AB78449229B6E6310094C425 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = AB78449129B6E6310094C425 /* FirebaseFunctions */; };
+		AB78449429B6E6310094C425 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = AB78449329B6E6310094C425 /* FirebaseInAppMessagingSwift-Beta */; };
+		AB78449629B6E6310094C425 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = AB78449529B6E6310094C425 /* FirebaseInstallations */; };
+		AB78449829B6E6310094C425 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AB78449729B6E6310094C425 /* FirebaseMessaging */; };
+		AB78449A29B6E6310094C425 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AB78449929B6E6310094C425 /* FirebaseStorage */; };
+		AB78449C29B6E7020094C425 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB78449B29B6E7010094C425 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB78446429B6458F0094C425 /* HairDresserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HairDresserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB78446729B6458F0094C425 /* HairDresserAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairDresserAppApp.swift; sourceTree = "<group>"; };
+		AB78446929B6458F0094C425 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB78446B29B645910094C425 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB78446E29B645910094C425 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB78447829B645B80094C425 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		AB78447929B645B80094C425 /* SearchResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		AB78447A29B645B80094C425 /* SalonDirectoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalonDirectoryView.swift; sourceTree = "<group>"; };
+		AB78447B29B645B80094C425 /* CheckInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
+		AB78448129B6478F0094C425 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AB78448429B6E4860094C425 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		AB78449B29B6E7010094C425 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB78446129B6458F0094C425 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB78449829B6E6310094C425 /* FirebaseMessaging in Frameworks */,
+				AB78449029B6E6310094C425 /* FirebaseFirestoreSwift in Frameworks */,
+				AB78448C29B6E6310094C425 /* FirebaseDatabaseSwift in Frameworks */,
+				AB78449A29B6E6310094C425 /* FirebaseStorage in Frameworks */,
+				AB78449429B6E6310094C425 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				AB78449629B6E6310094C425 /* FirebaseInstallations in Frameworks */,
+				AB78448E29B6E6310094C425 /* FirebaseFirestore in Frameworks */,
+				AB78449229B6E6310094C425 /* FirebaseFunctions in Frameworks */,
+				AB78448A29B6E6310094C425 /* FirebaseDatabase in Frameworks */,
+				AB78448829B6E6310094C425 /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB78445B29B6458F0094C425 = {
+			isa = PBXGroup;
+			children = (
+				AB78446629B6458F0094C425 /* HairDresserApp */,
+				AB78446529B6458F0094C425 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB78446529B6458F0094C425 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB78446429B6458F0094C425 /* HairDresserApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB78446629B6458F0094C425 /* HairDresserApp */ = {
+			isa = PBXGroup;
+			children = (
+				AB78446729B6458F0094C425 /* HairDresserAppApp.swift */,
+				AB78446929B6458F0094C425 /* ContentView.swift */,
+				AB78447529B645B80094C425 /* Model */,
+				AB78447729B645B80094C425 /* View */,
+				AB78447629B645B80094C425 /* ViewModel */,
+				AB78448329B6E4530094C425 /* Authentication */,
+				AB78448029B645C20094C425 /* Resources */,
+				AB78446D29B645910094C425 /* Preview Content */,
+			);
+			path = HairDresserApp;
+			sourceTree = "<group>";
+		};
+		AB78446D29B645910094C425 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AB78446E29B645910094C425 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB78447529B645B80094C425 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB78447629B645B80094C425 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AB78447729B645B80094C425 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB78447829B645B80094C425 /* MainTabView.swift */,
+				AB78447B29B645B80094C425 /* CheckInView.swift */,
+				AB78447929B645B80094C425 /* SearchResultView.swift */,
+				AB78447A29B645B80094C425 /* SalonDirectoryView.swift */,
+				AB78448129B6478F0094C425 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB78448029B645C20094C425 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB78449B29B6E7010094C425 /* GoogleService-Info.plist */,
+				AB78446B29B645910094C425 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB78448329B6E4530094C425 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AB78448429B6E4860094C425 /* AuthenticationViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB78446329B6458F0094C425 /* HairDresserApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB78447229B645910094C425 /* Build configuration list for PBXNativeTarget "HairDresserApp" */;
+			buildPhases = (
+				AB78446029B6458F0094C425 /* Sources */,
+				AB78446129B6458F0094C425 /* Frameworks */,
+				AB78446229B6458F0094C425 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HairDresserApp;
+			packageProductDependencies = (
+				AB78448729B6E6310094C425 /* FirebaseAuth */,
+				AB78448929B6E6310094C425 /* FirebaseDatabase */,
+				AB78448B29B6E6310094C425 /* FirebaseDatabaseSwift */,
+				AB78448D29B6E6310094C425 /* FirebaseFirestore */,
+				AB78448F29B6E6310094C425 /* FirebaseFirestoreSwift */,
+				AB78449129B6E6310094C425 /* FirebaseFunctions */,
+				AB78449329B6E6310094C425 /* FirebaseInAppMessagingSwift-Beta */,
+				AB78449529B6E6310094C425 /* FirebaseInstallations */,
+				AB78449729B6E6310094C425 /* FirebaseMessaging */,
+				AB78449929B6E6310094C425 /* FirebaseStorage */,
+			);
+			productName = HairDresserApp;
+			productReference = AB78446429B6458F0094C425 /* HairDresserApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB78445C29B6458F0094C425 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					AB78446329B6458F0094C425 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = AB78445F29B6458F0094C425 /* Build configuration list for PBXProject "HairDresserApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB78445B29B6458F0094C425;
+			packageReferences = (
+				AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = AB78446529B6458F0094C425 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB78446329B6458F0094C425 /* HairDresserApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB78446229B6458F0094C425 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB78446F29B645910094C425 /* Preview Assets.xcassets in Resources */,
+				AB78446C29B645910094C425 /* Assets.xcassets in Resources */,
+				AB78449C29B6E7020094C425 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB78446029B6458F0094C425 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB78447E29B645B80094C425 /* SalonDirectoryView.swift in Sources */,
+				AB78446A29B6458F0094C425 /* ContentView.swift in Sources */,
+				AB78447F29B645B80094C425 /* CheckInView.swift in Sources */,
+				AB78447D29B645B80094C425 /* SearchResultView.swift in Sources */,
+				AB78448529B6E4860094C425 /* AuthenticationViewModel.swift in Sources */,
+				AB78446829B6458F0094C425 /* HairDresserAppApp.swift in Sources */,
+				AB78448229B6478F0094C425 /* ProfileView.swift in Sources */,
+				AB78447C29B645B80094C425 /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AB78447029B645910094C425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB78447129B645910094C425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB78447329B645910094C425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HairDresserApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lakshmisowjanya.HairDresser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB78447429B645910094C425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HairDresserApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lakshmisowjanya.HairDresser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB78445F29B6458F0094C425 /* Build configuration list for PBXProject "HairDresserApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB78447029B645910094C425 /* Debug */,
+				AB78447129B645910094C425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB78447229B645910094C425 /* Build configuration list for PBXNativeTarget "HairDresserApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB78447329B645910094C425 /* Debug */,
+				AB78447429B645910094C425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB78448729B6E6310094C425 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		AB78448929B6E6310094C425 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		AB78448B29B6E6310094C425 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		AB78448D29B6E6310094C425 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		AB78448F29B6E6310094C425 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		AB78449129B6E6310094C425 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		AB78449329B6E6310094C425 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		AB78449529B6E6310094C425 /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		AB78449729B6E6310094C425 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		AB78449929B6E6310094C425 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB78448629B6E6310094C425 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AB78445C29B6458F0094C425 /* Project object */;
+}
