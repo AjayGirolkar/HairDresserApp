@@ -18,6 +18,7 @@ struct HairDresserAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(AuthenticationViewModel.shared) //Shared object initialized
         }
     }
 }

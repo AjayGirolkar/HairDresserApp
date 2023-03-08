@@ -8,25 +8,31 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
+    init() {
+//        UITabBar.appearance().backgroundColor = UIColor.blue
+//        UITabBar.appearance().barTintColor = .white
+    }
+    
     var body: some View {
+        
         NavigationView {
             TabView {
                 CheckInView()
                     .tabItem {
                         Image(systemName: "house.fill")
                     }
-                SearchResultView()
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                    }
                 SalonDirectoryView()
                     .tabItem {
-                        Image(systemName: "mappin")
+                        Image(systemName: "location")
                     }
-                
                 ProfileView()
                     .tabItem {
                         Image(systemName: "person.fill")
+                    }
+                MoreDetailsView()
+                    .tabItem {
+                        Image(systemName: "ellipsis")
                     }
             }.navigationTitle("Hair Dresser")
                 .accentColor(.black)

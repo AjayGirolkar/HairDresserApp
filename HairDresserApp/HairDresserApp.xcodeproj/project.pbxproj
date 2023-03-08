@@ -28,6 +28,17 @@
 		AB78449829B6E6310094C425 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AB78449729B6E6310094C425 /* FirebaseMessaging */; };
 		AB78449A29B6E6310094C425 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AB78449929B6E6310094C425 /* FirebaseStorage */; };
 		AB78449C29B6E7020094C425 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB78449B29B6E7010094C425 /* GoogleService-Info.plist */; };
+		AB78449F29B6E90F0094C425 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78449E29B6E90F0094C425 /* LoginView.swift */; };
+		AB7844A429B6E9500094C425 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844A029B6E94F0094C425 /* CustomTextField.swift */; };
+		AB7844A529B6E9500094C425 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844A129B6E94F0094C425 /* RegistrationView.swift */; };
+		AB7844A629B6E9500094C425 /* CustomSecuredTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844A229B6E94F0094C425 /* CustomSecuredTextField.swift */; };
+		AB7844A729B6E9500094C425 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844A329B6E94F0094C425 /* ResetPasswordView.swift */; };
+		AB7844AA29B6E9E90094C425 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844A929B6E9E90094C425 /* ImageUploader.swift */; };
+		AB7844AD29B6F0690094C425 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844AC29B6F0690094C425 /* ImagePicker.swift */; };
+		AB7844AF29B6F08A0094C425 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844AE29B6F08A0094C425 /* ImageHelper.swift */; };
+		AB7844B129B7033C0094C425 /* EnumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844B029B7033C0094C425 /* EnumHelper.swift */; };
+		AB7844B429B708DC0094C425 /* CustomSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844B329B708DC0094C425 /* CustomSegmentView.swift */; };
+		AB7844BA29B8E4290094C425 /* MoreDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7844B929B8E4290094C425 /* MoreDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +54,17 @@
 		AB78448129B6478F0094C425 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AB78448429B6E4860094C425 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		AB78449B29B6E7010094C425 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB78449E29B6E90F0094C425 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AB7844A029B6E94F0094C425 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		AB7844A129B6E94F0094C425 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		AB7844A229B6E94F0094C425 /* CustomSecuredTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSecuredTextField.swift; sourceTree = "<group>"; };
+		AB7844A329B6E94F0094C425 /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		AB7844A929B6E9E90094C425 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		AB7844AC29B6F0690094C425 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		AB7844AE29B6F08A0094C425 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		AB7844B029B7033C0094C425 /* EnumHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHelper.swift; sourceTree = "<group>"; };
+		AB7844B329B708DC0094C425 /* CustomSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentView.swift; sourceTree = "<group>"; };
+		AB7844B929B8E4290094C425 /* MoreDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +113,8 @@
 				AB78447729B645B80094C425 /* View */,
 				AB78447629B645B80094C425 /* ViewModel */,
 				AB78448329B6E4530094C425 /* Authentication */,
+				AB7844A829B6E9D90094C425 /* API */,
+				AB7844AB29B6F05F0094C425 /* Helper */,
 				AB78448029B645C20094C425 /* Resources */,
 				AB78446D29B645910094C425 /* Preview Content */,
 			);
@@ -127,6 +151,8 @@
 				AB78447929B645B80094C425 /* SearchResultView.swift */,
 				AB78447A29B645B80094C425 /* SalonDirectoryView.swift */,
 				AB78448129B6478F0094C425 /* ProfileView.swift */,
+				AB7844B929B8E4290094C425 /* MoreDetailsView.swift */,
+				AB78449D29B6E9000094C425 /* Authentication */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +172,45 @@
 				AB78448429B6E4860094C425 /* AuthenticationViewModel.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		AB78449D29B6E9000094C425 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AB7844A229B6E94F0094C425 /* CustomSecuredTextField.swift */,
+				AB7844A029B6E94F0094C425 /* CustomTextField.swift */,
+				AB7844A129B6E94F0094C425 /* RegistrationView.swift */,
+				AB7844A329B6E94F0094C425 /* ResetPasswordView.swift */,
+				AB78449E29B6E90F0094C425 /* LoginView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		AB7844A829B6E9D90094C425 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AB7844A929B6E9E90094C425 /* ImageUploader.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AB7844AB29B6F05F0094C425 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AB7844B229B708CD0094C425 /* Views */,
+				AB7844AC29B6F0690094C425 /* ImagePicker.swift */,
+				AB7844AE29B6F08A0094C425 /* ImageHelper.swift */,
+				AB7844B029B7033C0094C425 /* EnumHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		AB7844B229B708CD0094C425 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB7844B329B708DC0094C425 /* CustomSegmentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,14 +299,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB7844A529B6E9500094C425 /* RegistrationView.swift in Sources */,
 				AB78447E29B645B80094C425 /* SalonDirectoryView.swift in Sources */,
 				AB78446A29B6458F0094C425 /* ContentView.swift in Sources */,
 				AB78447F29B645B80094C425 /* CheckInView.swift in Sources */,
+				AB78449F29B6E90F0094C425 /* LoginView.swift in Sources */,
+				AB7844A429B6E9500094C425 /* CustomTextField.swift in Sources */,
+				AB7844A729B6E9500094C425 /* ResetPasswordView.swift in Sources */,
+				AB7844AA29B6E9E90094C425 /* ImageUploader.swift in Sources */,
+				AB7844A629B6E9500094C425 /* CustomSecuredTextField.swift in Sources */,
+				AB7844BA29B8E4290094C425 /* MoreDetailsView.swift in Sources */,
 				AB78447D29B645B80094C425 /* SearchResultView.swift in Sources */,
 				AB78448529B6E4860094C425 /* AuthenticationViewModel.swift in Sources */,
+				AB7844B129B7033C0094C425 /* EnumHelper.swift in Sources */,
 				AB78446829B6458F0094C425 /* HairDresserAppApp.swift in Sources */,
+				AB7844B429B708DC0094C425 /* CustomSegmentView.swift in Sources */,
+				AB7844AD29B6F0690094C425 /* ImagePicker.swift in Sources */,
 				AB78448229B6478F0094C425 /* ProfileView.swift in Sources */,
 				AB78447C29B645B80094C425 /* MainTabView.swift in Sources */,
+				AB7844AF29B6F08A0094C425 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ struct CheckInView: View {
             VStack(alignment: .leading, spacing: 10) {
                 VStack(alignment: .leading, spacing: 30){
                     Text("Check Me In")
-                        .font(.system(size: 16, weight: .semibold))
+                        .font(.system(size: 22, weight: .semibold))
                     TextField("Zip code, city or State", text: $searchText)
                         .textFieldStyle(.roundedBorder)
                     HStack {
