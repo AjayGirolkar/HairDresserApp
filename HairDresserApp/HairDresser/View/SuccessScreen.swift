@@ -10,7 +10,7 @@ import SwiftUI
 struct SuccessScreenView: View {
     var submitScreenModel: SubmitScreenModel
 
-    private var saloonName: String {
+    private var salonName: String {
         submitScreenModel.salonDetails.salonName
     }
     private var dateAndTime: String {
@@ -35,7 +35,7 @@ struct SuccessScreenView: View {
                 .frame(width: 100, height: 100)
                 .aspectRatio(contentMode: .fit)
             Spacer(minLength: 30)
-            Text("Your booking is confirm for ") + Text(saloonName).fontWeight(.semibold) + Text(" on ") + Text(dateAndTime).fontWeight(.semibold) + Text(". Please visit Saloon on given time.")
+            Text("Your booking is confirm for ") + Text(salonName).fontWeight(.semibold) + Text(" on ") + Text(dateAndTime).fontWeight(.semibold) + Text(". Please visit Salon on given time.")
             Spacer()
             continueButton
         }.padding()

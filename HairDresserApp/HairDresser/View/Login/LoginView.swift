@@ -17,7 +17,7 @@ struct LoginView: View {
     @State private var errorMessage = "Error in Login, Please try again..!"
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 getGradientView()
                 LoadingView(isShowing: $inProgress) { //Loading view
@@ -68,16 +68,21 @@ struct LoginView: View {
             //Email
             CustomTextField(text: $email,
                             placeHolderText: "Email",
-                            imageName: "envelope")
+                            imageName: "envelope",
+                            backgroundColor: Color(.init(white: 1, alpha: 0.15)),
+                            textColor: .white,
+                            placeHolderColor: Color.init(.white.withAlphaComponent(0.8)))
             .cornerRadius(10)
-            .foregroundColor(.white)
             .padding(.horizontal, 32)
             
             //Password
             CustomSecuredTextField(text: $password,
-                                   placeHolderText: "Password")
+                                   placeHolderText: "Password",
+                                   backgroundColor: Color(.init(white: 1, alpha: 0.15)),
+                                   textColor: .white,
+                                   placeHolderColor: Color.init(.white.withAlphaComponent(0.8)))
             .cornerRadius(10)
-            .foregroundColor(.white)
+            .foregroundColor(.primary)
             .padding(.horizontal, 32)
             
             //Forgot password

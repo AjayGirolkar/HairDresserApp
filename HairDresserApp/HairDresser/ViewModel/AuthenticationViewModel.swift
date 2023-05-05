@@ -37,6 +37,7 @@ class AuthenticationViewModel: ObservableObject {
     
     func register(email: String, password: String,
                   image: UIImage, fullname: String,
+                  contactNumber: String,
                   username: String, userRole: String,
                   completion: @escaping (Bool, String?) -> Void) {
         
@@ -47,6 +48,7 @@ class AuthenticationViewModel: ObservableObject {
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
                 if let error = error {
                     print(error.localizedDescription)
+                    completion(false, error.localizedDescription)
                     return
                 }
                 guard let user = result?.user else { return }
@@ -56,6 +58,7 @@ class AuthenticationViewModel: ObservableObject {
                 let data = ["email": email,
                             "username": username,
                             "fullname": fullname,
+                            "contactNumber": contactNumber,
                             "profileImageUrl": imageURL,
                             "userRole": userRole.lowercased(),
                             "uid": user.uid]
@@ -76,6 +79,7 @@ class AuthenticationViewModel: ObservableObject {
             }
             self.user = user
             completion(true, nil)
+            self.fetchUser()
             print("Successfully uploaded userdata")
         }
     }
@@ -93,7 +97,7 @@ class AuthenticationViewModel: ObservableObject {
     
     func fetchUser() {
         guard let userID = self.user?.uid else { return }
-        Constants.COLLECTION_USERS.document(userID).getDocument { snapshot, error in
+        APIConstants.COLLECTION_USERS.document(userID).getDocument { snapshot, error in
             if let error {
                 print( "Error in fetching user \(error.localizedDescription)")
             }

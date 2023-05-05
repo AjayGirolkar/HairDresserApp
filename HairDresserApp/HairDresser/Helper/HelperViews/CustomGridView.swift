@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum GridType {
+enum GridType: Codable {
     case calendar
     case stylish
     case checkInTime

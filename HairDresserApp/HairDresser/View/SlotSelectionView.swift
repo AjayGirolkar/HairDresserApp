@@ -11,11 +11,12 @@ import SwiftUI
 struct SlotSelectionView: View {
     @ObservedObject var slotSelectionViewModel = SlotSelectionViewModel()
     private var selectedServices: [SelectedServiceInput] = []
-
-    init(selectedServices: [SelectedServiceInput] = []) {
-        self.selectedServices = selectedServices
-    }
+    var salonDetails: SalonDetails
     
+    init(salonDetails: SalonDetails, selectedServices: [SelectedServiceInput] = []) {
+        self.selectedServices = selectedServices
+        self.salonDetails = salonDetails
+    }
     
     var body: some View {
         VStack {
@@ -48,12 +49,13 @@ struct SlotSelectionView: View {
         var submitScreenModel = Constants.submitScreenModel
         submitScreenModel.userSelectionModel = slotSelectionViewModel.userSelectionModel
         submitScreenModel.selectedServiceList = selectedServices
+        submitScreenModel.salonDetails = salonDetails
         return submitScreenModel
     }
 }
 
 struct SlotSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SlotSelectionView()
+        SlotSelectionView(salonDetails: Example.salonDetailsExample)
     }
 }

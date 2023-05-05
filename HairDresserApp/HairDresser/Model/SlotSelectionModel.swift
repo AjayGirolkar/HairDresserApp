@@ -18,7 +18,16 @@ struct GridItemModel {
     let id = UUID().uuidString
     var title: String
     var description: String?
+    var date: Date?
     var isSelected: Bool
+    
+    func value() -> String {
+        var title = title
+        if let description = description {
+            title = title + " " + description
+        }
+        return title
+    }
 }
 
 struct UserSelectionModel {

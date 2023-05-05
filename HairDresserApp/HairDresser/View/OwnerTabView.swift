@@ -1,19 +1,19 @@
 //
-//  MainTabView.swift
+//  OwnerTabView.swift
 //  HairDresser
 //
-//  Created by Rajesh Kanneboyena on 11/03/23.
+//  Created by Rajesh Kanneboyena on 25/04/23.
 //
 
 import SwiftUI
 
-struct MainTabView: View {
+struct OwnerTabView: View {
     @State var selectedIndex: Int = 0
     var user: User
     @ObservedObject var locationManager = LocationManager()
     
     init(user: User) {
-        UITabBar.appearance().backgroundColor = UIColor.systemBackground
+        UITabBar.appearance().backgroundColor = UIColor(Constants.backgroundColor)
         self.user = user
         locationManager.requestLocation()
     }
@@ -25,9 +25,9 @@ struct MainTabView: View {
                     .tabItem {
                         Image(systemName: "house.fill")
                     }.tag(0)
-                CustomMapView(locationManager: locationManager)
+                SalonRegistationView()
                     .tabItem {
-                        Image(systemName: "location")
+                        Image(systemName: "plus.app.fill")
                     }.tag(1)
                 NotificationsView()
                     .tabItem {
@@ -42,13 +42,15 @@ struct MainTabView: View {
             .background(Constants.screenBackgroundColor)
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Constants.backgroundColor, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
         }
     }
     
     var navigationTitle: String {
         switch selectedIndex {
-        case 0: return "Check Me In"
-        case 1: return "Explore"
+        case 0: return "Salon Details"
+        case 1: return "Register Salon"
         case 2: return "Notifications"
         case 3: return "More"
         default: return "Title"
@@ -56,8 +58,8 @@ struct MainTabView: View {
     }
 }
 
-struct MainTabView_Previews: PreviewProvider {
+struct OwnerTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView(user: Constants.placeHolderUser)
+        OwnerTabView(user: Constants.placeHolderUser)
     }
 }

@@ -1,19 +1,19 @@
 //
-//  MainTabView.swift
+//  CustomerTabView.swift
 //  HairDresser
 //
-//  Created by Rajesh Kanneboyena on 11/03/23.
+//  Created by Lakshmi Sowjanya on 25/04/23.
 //
 
 import SwiftUI
 
-struct MainTabView: View {
+struct CustomerTabView: View {
     @State var selectedIndex: Int = 0
     var user: User
     @ObservedObject var locationManager = LocationManager()
     
     init(user: User) {
-        UITabBar.appearance().backgroundColor = UIColor.systemBackground
+        UITabBar.appearance().backgroundColor = UIColor(Constants.backgroundColor)
         self.user = user
         locationManager.requestLocation()
     }
@@ -38,10 +38,11 @@ struct MainTabView: View {
                         Image(systemName: "ellipsis")
                     }.tag(3)
             }
-            //.accentColor(Color(uiColor: UIColor.prim))
             .background(Constants.screenBackgroundColor)
             .navigationTitle(navigationTitle)
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Constants.backgroundColor, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
         }
     }
     
@@ -56,8 +57,8 @@ struct MainTabView: View {
     }
 }
 
-struct MainTabView_Previews: PreviewProvider {
+struct CustomerTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView(user: Constants.placeHolderUser)
+        CustomerTabView(user: Constants.placeHolderUser)
     }
 }

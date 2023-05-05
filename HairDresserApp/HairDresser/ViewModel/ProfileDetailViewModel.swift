@@ -7,6 +7,10 @@
 
 import Foundation
 
-class ProfileDetailViewModel {
+class ProfileDetailViewModel: ObservableObject {
+    @Published var user: User
     
+    init(user: User) {
+        self.user = user
+    }
 }

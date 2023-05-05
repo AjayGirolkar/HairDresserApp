@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct CheckInDetailView: View {
-    @ObservedObject var checkInDetailViewModel = CheckInDetailViewModel()
+    var salonDetails: SalonDetails
+    @ObservedObject var checkInDetailViewModel: CheckInDetailViewModel
     @State var isChecked: Bool = false
     private let padding: CGFloat = 10
     private var checkInDetailModel: CheckInDetailModel {
         return checkInDetailViewModel.checkInDetailModel
+    }
+    
+    init(salonDetails: SalonDetails) {
+        self.salonDetails = salonDetails
+        checkInDetailViewModel = CheckInDetailViewModel(salonDetails: salonDetails)
     }
     
     var body: some View {
@@ -73,7 +79,8 @@ struct CheckInDetailView: View {
     
     var continueButton: some View {
         VStack {
-            NavigationLink(destination: SlotSelectionView(selectedServices: checkInDetailViewModel.selectedServices)) {
+            NavigationLink(destination: SlotSelectionView(salonDetails: salonDetails,
+                                                          selectedServices: checkInDetailViewModel.selectedServices)) {
                 Text("Continue")
                     .frame(maxWidth: .infinity)
                     .fontWeight(.bold)
@@ -87,6 +94,6 @@ struct CheckInDetailView: View {
 
 struct CheckInDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckInDetailView()
+        CheckInDetailView(salonDetails: Example.salonDetailsExample)
     }
 }

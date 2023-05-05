@@ -12,8 +12,8 @@ struct RegistrationView: View {
     @State private var fullname = ""
     @State private var username = ""
     @State private var password = ""
-    @State private var selectedImage: UIImage?
-    @State private var postImage: Image?
+    @State private var contactNumber = ""
+    @State private var postImageArray = [UIImage]()
     @State var imagePickerPresented = false
     @State private var selectedUserRole = "Customer"
     @State var inProgress = false
@@ -45,7 +45,7 @@ struct RegistrationView: View {
                         addSignInButton()
                     }.frame(height: UIScreen.main.bounds.height * 0.9)
                 }
-            }
+            }.toolbarBackground(Constants.backgroundColor, for: .navigationBar)
         }
         .background(Constants.screenBackgroundColor)
         .navigationBarHidden(true)
@@ -60,28 +60,34 @@ struct RegistrationView: View {
     
     func getUploadPhotoButton() -> some View {
         VStack {
-            if let postImage = postImage {
-                postImage
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 120, height: 120)
-                    .clipShape(Circle())
-            } else {
-                VStack {
-                    Button {
-                        imagePickerPresented.toggle()
-                    } label: {
+            VStack {
+                Button {
+                    postImageArray.removeAll()
+                    imagePickerPresented.toggle()
+                } label: {
+                    
+                    if let firstImage = postImageArray.first {
+                        let postImage = Image(uiImage: firstImage)
+                        postImage
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 120, height: 120)
+                            .clipShape(Circle())
+                    } else {
+                        
                         ImageHelper.getPlusCircleImageView(foreGroundColor: .white)
                             .foregroundColor(.white)
                             .padding(.bottom, 30)
-                        
-                    }.sheet(isPresented: $imagePickerPresented, onDismiss: loadImage) {
-                        ImagePicker(image: $selectedImage)
                     }
-                    if showUploadProfileError {
-                        Text("Please select profile image")
-                            .foregroundColor(.red)
-                    }
+                    
+                }.sheet(isPresented: $imagePickerPresented) {
+                    ImagePickerView(images: $postImageArray,
+                                    showPicker: $imagePickerPresented,
+                                    selectionLimit: 1)
+                }
+                if showUploadProfileError {
+                    Text("Please select profile image")
+                        .foregroundColor(.red)
                 }
             }
         }.padding()
@@ -93,32 +99,50 @@ struct RegistrationView: View {
             //Email
             CustomTextField(text: $email,
                             placeHolderText: "Email",
-                            imageName: "envelope")
+                            imageName: "envelope",
+                            backgroundColor: Color(.init(white: 1, alpha: 0.15)),
+                            textColor: .white,
+                            placeHolderColor: Color.init(.white.withAlphaComponent(0.8)))
             .cornerRadius(10)
-            .foregroundColor(.white)
             .padding(.horizontal, 32)
             
             //Username
             CustomTextField(text: $username,
                             placeHolderText: "Username",
-                            imageName: "person")
+                            imageName: "person",
+                            backgroundColor: Color(.init(white: 1, alpha: 0.15)),
+                            textColor: .white,
+                            placeHolderColor: Color.init(.white.withAlphaComponent(0.8)))
             .cornerRadius(10)
-            .foregroundColor(.white)
             .padding(.horizontal, 32)
             
             //Full name
             CustomTextField(text: $fullname,
                             placeHolderText: "Full name",
-                            imageName: "person")
+                            imageName: "person",
+                            backgroundColor: Color(.init(white: 1, alpha: 0.15)),
+                            textColor: .white,
+                            placeHolderColor: Color.init(.white.withAlphaComponent(0.8)))
             .cornerRadius(10)
-            .foregroundColor(.white)
             .padding(.horizontal, 32)
             
             //Password
             CustomSecuredTextField(text: $password,
-                                   placeHolderText: "Password")
+                                   placeHolderText: "Password",
+                                   backgroundColor: Color(.init(white: 1, alpha: 0.15)),
+                                   textColor: .white,
+                                   placeHolderColor: Color.init(.white.withAlphaComponent(0.8)))
             .cornerRadius(10)
-            .foregroundColor(.white)
+            .padding(.horizontal, 32)
+            
+            //Contact Number
+            CustomTextField(text: $contactNumber,
+                            placeHolderText: "Contact Number",
+                            imageName: "phone",
+                            backgroundColor: Color(.init(white: 1, alpha: 0.15)),
+                            textColor: .white,
+                            placeHolderColor: Color.init(.white.withAlphaComponent(0.8)))
+            .cornerRadius(10)
             .padding(.horizontal, 32)
             
             Spacer()
@@ -136,16 +160,18 @@ struct RegistrationView: View {
     func getSignUpButton() -> some View {
         HStack {
             Button {
-                let selectedImage = selectedImage ?? UIImage(systemName: "profile")
+                let selectedImage: UIImage? = postImageArray.first ?? UIImage(systemName: "profile")
                 if let selectedImage {
                     inProgress = true
+                    isSuccess = false
                     authViewModel.register(email: email, password: password,
                                            image: selectedImage, fullname: fullname,
+                                           contactNumber: contactNumber,
                                            username: username, userRole: selectedUserRole) { success, error in
                         if let error {
                             alertMessage = "Failed to create user: \(error)"
                         } else {
-                            alertMessage = "Successfully created user, Please login"
+                            alertMessage = "Successfully created user"
                             isSuccess = true
                         }
                         inProgress = false
@@ -162,11 +188,13 @@ struct RegistrationView: View {
                     .frame(height: 50)
                     .background(Color("LightPink"))
                     .clipShape(Capsule())
-            }.alert(alertMessage, isPresented: $showingAlert) {
+            }.alert(alertMessage, isPresented: $showingAlert, actions: {
                 if isSuccess {
-                    LoginView()
+                    Button("Ok") {
+                        authViewModel.fetchUser()
+                    }
                 }
-            }
+            })
         }
     }
     
@@ -189,14 +217,6 @@ struct RegistrationView: View {
                 }.foregroundColor(.white)
             }.padding(.bottom, 32)
         }
-    }
-}
-
-extension RegistrationView {
-    func loadImage() {
-        guard let selectedImage = selectedImage else { return }
-        postImage = Image(uiImage: selectedImage)
-        showUploadProfileError = false
     }
 }
 

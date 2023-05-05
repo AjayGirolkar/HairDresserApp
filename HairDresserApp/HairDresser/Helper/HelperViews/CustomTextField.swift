@@ -11,14 +11,16 @@ struct CustomTextField: View {
     @Binding var text: String
     var placeHolderText: String
     let imageName: String
-    
+    var backgroundColor = Color.primary.opacity(0.15)
+    var textColor = Color.primary
+    var placeHolderColor = Color.primary.opacity(0.8)
     
     var body: some View {
         ZStack(alignment: .leading) {
             if text.isEmpty {
                 Text(placeHolderText)
                     .autocorrectionDisabled()
-                    .foregroundColor(Color.init(.white.withAlphaComponent(0.8)))
+                    .foregroundColor(placeHolderColor)
                     .padding(.leading, 40)
             }
             
@@ -27,13 +29,14 @@ struct CustomTextField: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
-                    .foregroundColor(.white)
+                    .foregroundColor(textColor)
                 TextField("", text: $text)
+                    .foregroundColor(textColor)
                     .autocorrectionDisabled()
                     .autocapitalization(.none)
             }
         }.padding()
-        .background(Color(.init(white: 1, alpha: 0.15)))
+            .background(backgroundColor)
     }
 }
 

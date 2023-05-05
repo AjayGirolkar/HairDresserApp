@@ -12,10 +12,17 @@ struct User: Identifiable, Decodable {
     let username: String
     let email: String
     let fullname: String
+    let contactNumber: String?
     let profileImageUrl: String?
+    var userRole: String = ""
     
-    var isCurrentUser: Bool {
+    var isCurrentUser: Bool? {
         return AuthenticationViewModel.shared.user?.uid == id
+    }
+    
+    var userRoleType: UserRole? {
+        let userRole = UserRole(rawValue: userRole)
+        return userRole ?? .customer
     }
 }
 

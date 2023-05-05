@@ -14,7 +14,14 @@ struct ContentView: View {
         if authViewModel.user == nil {  //if not logged in show login screen
             LoginView()
         } else { //else show landing screen
-            MainTabView()
+            if let currentUser = authViewModel.currentUser,
+               let userRole = currentUser.userRoleType{ //else show landing screen
+                if userRole == .customer {
+                    CustomerTabView(user: currentUser)
+                } else {
+                    OwnerTabView(user: currentUser)
+                }
+            }
         }
     }
 }

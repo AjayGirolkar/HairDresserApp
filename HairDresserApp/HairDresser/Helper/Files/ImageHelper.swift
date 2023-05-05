@@ -28,6 +28,14 @@ struct ImageHelper {
         }
         
     }
+    
+    static func getImageFromURL(url: URL) -> UIImage? {
+        if let data = try? Data(contentsOf: url) {
+            let image = UIImage(data: data)
+            return image
+        }
+        return nil
+    }
 }
 
 extension UIView {
@@ -39,4 +47,5 @@ extension UIView {
         }
     }
 }
+
 

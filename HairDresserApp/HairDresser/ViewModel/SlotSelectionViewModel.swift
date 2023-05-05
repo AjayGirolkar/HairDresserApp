@@ -19,12 +19,7 @@ class SlotSelectionViewModel: ObservableObject {
     
     func getData() {
         //calendar
-        let calendarItems = [GridItemModel(title: "Tue", description: "6", isSelected: false),
-                             GridItemModel(title: "Wed", description: "7", isSelected: false)]
-        let calendarData = GridDetailModel(header: "Date",
-                                           gridType: .calendar,
-                                           gridItems: calendarItems,
-                                           callBack: itemSelectionCallBack)
+        let calendarData = getDateModel()
         
         //stylish
         let stylishItems = [GridItemModel(title: "Next Available", description: nil, isSelected: false),
@@ -58,6 +53,29 @@ class SlotSelectionViewModel: ObservableObject {
         gridDetailModel = [calendarData, stylishData, checkInData]
     }
     
+    func getDateModel() -> GridDetailModel {
+        let calendarItems = getCalendarItems()
+        let calendarData = GridDetailModel(header: "Date",
+                                           gridType: .calendar,
+                                           gridItems: calendarItems,
+                                           callBack: itemSelectionCallBack)
+        return calendarData
+    }
+    
+    func getCalendarItems() -> [GridItemModel] {
+        var gridModelItems: [GridItemModel] = []
+        let today = Date()
+        for index in 0...7 {
+            if let nextDate = today.dateAfterDay(count: index) {
+                let date = nextDate.getDateNumber()
+                let month = nextDate.dayOfWeek() ?? ""
+                let completeDay = month + ", " + date
+                let gridModel = GridItemModel(title: completeDay, date: nextDate, isSelected: false)
+                gridModelItems.append(gridModel)
+            }
+        }
+        return gridModelItems
+    }
     
     func itemSelectionCallBack(gridType: GridType, id: String) {
         for (index, model) in gridDetailModel.enumerated() {

@@ -10,7 +10,16 @@ import SwiftUI
 struct SubmitScreenView: View {
     
     var submitScreenModel: SubmitScreenModel = Example.submitScreenModelExample
-
+    @State var navigationSelection: Int? = nil
+    @State var inProgress = false
+    @State private var showingAlert = false
+    @State private var alertMessage = ""
+    @State private var alertTitle = ""
+    
+    var curentUser: User? {
+        return AuthenticationViewModel.shared.currentUser
+    }
+    
     init(submitScreenModel: SubmitScreenModel) {
         self.submitScreenModel = submitScreenModel
     }
@@ -20,7 +29,7 @@ struct SubmitScreenView: View {
             ScrollView {
                 
                 confirmHeader
-                saloonDetailView
+                salonDetailView
                 slotDetailView
                 serviceListDetailView
             }
@@ -36,7 +45,7 @@ struct SubmitScreenView: View {
             .foregroundColor(Constants.textColor)
     }
     
-    var saloonDetailView: some View {
+    var salonDetailView: some View {
         VStack(alignment: .leading) {
             //header
             HStack {
@@ -51,13 +60,13 @@ struct SubmitScreenView: View {
             //Addess
             VStack(alignment: .leading, spacing: 5) {
                 HStack(alignment: .top) {
-                    Text("Saloon name : ")
+                    Text("Salon name : ")
                     Spacer()
                     Text(submitScreenModel.salonDetails.salonName)
                         .fontWeight(.semibold)
                 }.padding()
                 HStack(alignment: .top) {
-                    Text("Saloon address : ")
+                    Text("Salon address : ")
                     Spacer()
                     Text(submitScreenModel.salonDetails.address)
                         .fontWeight(.semibold)
@@ -151,14 +160,50 @@ struct SubmitScreenView: View {
     
     var submitButton: some View {
         VStack {
-            NavigationLink(destination: SuccessScreenView(submitScreenModel: submitScreenModel)) {
-                Text("Submit")
-                    .frame(maxWidth: .infinity)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-            }.buttonStyle(.borderedProminent)
-                .padding()
+            NavigationLink(destination: SuccessScreenView(submitScreenModel: submitScreenModel), tag: 1, selection: $navigationSelection) {
+                Button {
+                    inProgress = true
+                    FirebaseManager.submit(submitScreenModel: submitScreenModel) { success, error in
+                        self.inProgress = false
+                        if let error {
+                            alertTitle = "Oh no.. Somthing went wrong!"
+                            alertMessage = "Failed to submit request: \(error)"
+                            return
+                        }
+                        self.navigationSelection = 1
+                        uploadNotificationToUser()
+                        uploadNotificationToSalon()
+                    }
+                } label: {
+                    Text("Submit")
+                        .frame(maxWidth: .infinity)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                }.buttonStyle(.borderedProminent)
+                    .padding()
+            }
         }.background(Constants.backgroundColor)
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage),
+                      dismissButton: .default(Text("Ok")))
+            }
+    }
+    
+    func uploadNotificationToUser() {
+        //let salonId = submitScreenModel.salonDetails.id
+        let message = "Your appointment has been confirm successfuly to salon \(submitScreenModel.salonDetails.salonName) at \(submitScreenModel.userSelectionModel?.checkInTimeSelectionModel?.value() ?? "")"
+        let currentUserId = AuthenticationViewModel.shared.currentUser?.id ?? ""
+        NotificationViewModel.uploadNotification(uid: currentUserId, message: message, type: .appointmentConfirmed, salonDetails: submitScreenModel.salonDetails)
+    }
+    
+    func uploadNotificationToSalon() {
+        guard let curentUser = curentUser else { return }
+        let salonOwnerId = submitScreenModel.salonDetails.uid
+        let formattedDate = submitScreenModel.userSelectionModel?.dateSelectedItem?.value() ?? Date().convertToTimeString()
+        let time = submitScreenModel.userSelectionModel?.checkInTimeSelectionModel?.value() ?? ""
+        let message = "Appointment received for user \(curentUser.fullname) on \(formattedDate) at \(time)"
+        //let salonId = submitScreenModel.salonDetails.id
+        NotificationViewModel.uploadNotification(uid: salonOwnerId, message: message, type: .appointmentConfirmed, salonDetails:submitScreenModel.salonDetails)
     }
 }
 
