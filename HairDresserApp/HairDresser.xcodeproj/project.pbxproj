@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB533DB029F42B2C00C49874 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB533DAF29F42B2C00C49874 /* LocationPreviewView.swift */; };
+		AB533DB629F7946B00C49874 /* OwnerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB533DB529F7946B00C49874 /* OwnerTabView.swift */; };
+		AB533DB829F7947700C49874 /* CustomerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB533DB729F7947700C49874 /* CustomerTabView.swift */; };
+		AB533DBA29FB6EF200C49874 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB533DB929FB6EF200C49874 /* NavigationLazyView.swift */; };
 		AB5DF82729C1855B00691BBA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DF82629C1855B00691BBA /* LoadingView.swift */; };
 		AB5DF82929C6C5A300691BBA /* CheckInDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DF82829C6C5A300691BBA /* CheckInDetailView.swift */; };
 		AB5DF82D29C6DD7800691BBA /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DF82C29C6DD7800691BBA /* CheckBoxView.swift */; };
@@ -58,6 +62,21 @@
 		AB822B1329BC78F600CB4CDA /* SalonDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB822B1229BC78F600CB4CDA /* SalonDetailsCell.swift */; };
 		AB822B1529BC82FD00CB4CDA /* SalonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB822B1429BC82FD00CB4CDA /* SalonDetailView.swift */; };
 		ABC0A4E129CFF1D80021690E /* CustomEnvironmentProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0A4E029CFF1D80021690E /* CustomEnvironmentProperties.swift */; };
+		ABC0A51E29D855B90021690E /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0A51D29D855B90021690E /* CustomMapView.swift */; };
+		ABC0A52029D855C30021690E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0A51F29D855C30021690E /* MapView.swift */; };
+		ABC0A52229D855D80021690E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0A52129D855D80021690E /* LocationManager.swift */; };
+		ABC0A52429D855EB0021690E /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0A52329D855EB0021690E /* Landmark.swift */; };
+		ABC0A52629D855FB0021690E /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0A52529D855FB0021690E /* LandmarkAnnotation.swift */; };
+		ABC0A52829D8560E0021690E /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0A52729D8560E0021690E /* PlaceListView.swift */; };
+		ABC122BE29DDE0C40094CF08 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122BD29DDE0C40094CF08 /* NotificationsView.swift */; };
+		ABC122C029DDE0DD0094CF08 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122BF29DDE0DD0094CF08 /* NotificationViewModel.swift */; };
+		ABC122C229DDE0F60094CF08 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122C129DDE0F60094CF08 /* Notification.swift */; };
+		ABC122C429DDE1190094CF08 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122C329DDE1190094CF08 /* NotificationCell.swift */; };
+		ABC122C629DEA9FF0094CF08 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122C529DEA9FF0094CF08 /* AsyncImageView.swift */; };
+		ABC122C829DF13090094CF08 /* SaloonRegistationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122C729DF13090094CF08 /* SaloonRegistationView.swift */; };
+		ABC122CA29DF18210094CF08 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122C929DF18210094CF08 /* CustomButtonView.swift */; };
+		ABC122DE29E6D7350094CF08 /* CustomTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122DD29E6D7350094CF08 /* CustomTimePickerView.swift */; };
+		ABC122E029E7245B0094CF08 /* CategoryInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC122DF29E7245B0094CF08 /* CategoryInputView.swift */; };
 		ABF161EB29BB9A0D00F3AAC2 /* HairDresserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF161EA29BB9A0D00F3AAC2 /* HairDresserApp.swift */; };
 		ABF161ED29BB9A0D00F3AAC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF161EC29BB9A0D00F3AAC2 /* ContentView.swift */; };
 		ABF161EF29BB9A0F00F3AAC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF161EE29BB9A0F00F3AAC2 /* Assets.xcassets */; };
@@ -65,6 +84,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB533DAF29F42B2C00C49874 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
+		AB533DB529F7946B00C49874 /* OwnerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTabView.swift; sourceTree = "<group>"; };
+		AB533DB729F7947700C49874 /* CustomerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTabView.swift; sourceTree = "<group>"; };
+		AB533DB929FB6EF200C49874 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 		AB5DF82629C1855B00691BBA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AB5DF82829C6C5A300691BBA /* CheckInDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInDetailView.swift; sourceTree = "<group>"; };
 		AB5DF82C29C6DD7800691BBA /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
@@ -105,6 +128,21 @@
 		AB822B1229BC78F600CB4CDA /* SalonDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonDetailsCell.swift; sourceTree = "<group>"; };
 		AB822B1429BC82FD00CB4CDA /* SalonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonDetailView.swift; sourceTree = "<group>"; };
 		ABC0A4E029CFF1D80021690E /* CustomEnvironmentProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnvironmentProperties.swift; sourceTree = "<group>"; };
+		ABC0A51D29D855B90021690E /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
+		ABC0A51F29D855C30021690E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		ABC0A52129D855D80021690E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		ABC0A52329D855EB0021690E /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		ABC0A52529D855FB0021690E /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
+		ABC0A52729D8560E0021690E /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		ABC122BD29DDE0C40094CF08 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		ABC122BF29DDE0DD0094CF08 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		ABC122C129DDE0F60094CF08 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		ABC122C329DDE1190094CF08 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		ABC122C529DEA9FF0094CF08 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		ABC122C729DF13090094CF08 /* SaloonRegistationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaloonRegistationView.swift; sourceTree = "<group>"; };
+		ABC122C929DF18210094CF08 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		ABC122DD29E6D7350094CF08 /* CustomTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimePickerView.swift; sourceTree = "<group>"; };
+		ABC122DF29E7245B0094CF08 /* CategoryInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInputView.swift; sourceTree = "<group>"; };
 		ABF161E729BB9A0D00F3AAC2 /* HairDresser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HairDresser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF161EA29BB9A0D00F3AAC2 /* HairDresserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairDresserApp.swift; sourceTree = "<group>"; };
 		ABF161EC29BB9A0D00F3AAC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +180,7 @@
 				AB6C7A0D29CED07E002D71CE /* CheckInDetailviewModel.swift */,
 				AB6C7A0F29CED0A5002D71CE /* SlotSelectionModel.swift */,
 				AB6C7A1329CEE39F002D71CE /* SubmitScreenModel.swift */,
+				ABC122C129DDE0F60094CF08 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +188,7 @@
 		AB822ABF29BB9B4F00CB4CDA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABC0A51C29D8557D0021690E /* MapView */,
 				AB822AC129BB9B6800CB4CDA /* Login */,
 				AB822B1129BC78E500CB4CDA /* Cells */,
 				AB822AFD29BC4B6200CB4CDA /* MainTabView.swift */,
@@ -161,6 +201,11 @@
 				AB5F042B29CCB1950061BF28 /* SlotSelectionView.swift */,
 				AB6C7A1129CEDF88002D71CE /* SubmitScreenView.swift */,
 				AB6C7A1529CF4E3D002D71CE /* SuccessScreen.swift */,
+				ABC122BD29DDE0C40094CF08 /* NotificationsView.swift */,
+				ABC122C729DF13090094CF08 /* SaloonRegistationView.swift */,
+				ABC122DF29E7245B0094CF08 /* CategoryInputView.swift */,
+				AB533DB529F7946B00C49874 /* OwnerTabView.swift */,
+				AB533DB729F7947700C49874 /* CustomerTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +220,7 @@
 				AB822ADA29BB9D4700CB4CDA /* MoreDetailViewModel.swift */,
 				AB822ADC29BB9E6000CB4CDA /* AuthenticationViewModel.swift */,
 				AB5F042F29CDEA850061BF28 /* SlotSelectionViewModel.swift */,
+				ABC122BF29DDE0DD0094CF08 /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -216,6 +262,11 @@
 				AB822B0B29BC706C00CB4CDA /* SearchBar.swift */,
 				AB5DF82C29C6DD7800691BBA /* CheckBoxView.swift */,
 				AB5F042D29CCB6650061BF28 /* CustomGridView.swift */,
+				ABC122C529DEA9FF0094CF08 /* AsyncImageView.swift */,
+				ABC122C929DF18210094CF08 /* CustomButtonView.swift */,
+				ABC122DD29E6D7350094CF08 /* CustomTimePickerView.swift */,
+				AB533DAF29F42B2C00C49874 /* LocationPreviewView.swift */,
+				AB533DB929FB6EF200C49874 /* NavigationLazyView.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -237,8 +288,22 @@
 			isa = PBXGroup;
 			children = (
 				AB822B1229BC78F600CB4CDA /* SalonDetailsCell.swift */,
+				ABC122C329DDE1190094CF08 /* NotificationCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		ABC0A51C29D8557D0021690E /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				ABC0A51D29D855B90021690E /* CustomMapView.swift */,
+				ABC0A51F29D855C30021690E /* MapView.swift */,
+				ABC0A52129D855D80021690E /* LocationManager.swift */,
+				ABC0A52329D855EB0021690E /* Landmark.swift */,
+				ABC0A52529D855FB0021690E /* LandmarkAnnotation.swift */,
+				ABC0A52729D8560E0021690E /* PlaceListView.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 		ABF161DE29BB9A0D00F3AAC2 = {
@@ -375,33 +440,52 @@
 				AB822AD129BB9D0900CB4CDA /* FirebaseManager.swift in Sources */,
 				ABF161EB29BB9A0D00F3AAC2 /* HairDresserApp.swift in Sources */,
 				AB6C7A1229CEDF88002D71CE /* SubmitScreenView.swift in Sources */,
+				AB533DB829F7947700C49874 /* CustomerTabView.swift in Sources */,
 				AB822AFE29BC4B6200CB4CDA /* MainTabView.swift in Sources */,
+				AB533DB629F7946B00C49874 /* OwnerTabView.swift in Sources */,
 				AB5F042E29CCB6650061BF28 /* CustomGridView.swift in Sources */,
 				AB822AFC29BBA2C600CB4CDA /* ImageUploader.swift in Sources */,
+				ABC122C029DDE0DD0094CF08 /* NotificationViewModel.swift in Sources */,
+				ABC122E029E7245B0094CF08 /* CategoryInputView.swift in Sources */,
 				AB822B0C29BC706C00CB4CDA /* SearchBar.swift in Sources */,
 				AB6C7A1029CED0A5002D71CE /* SlotSelectionModel.swift in Sources */,
 				AB822ACB29BB9C3700CB4CDA /* MoreDetailView.swift in Sources */,
 				AB822ADD29BB9E6000CB4CDA /* AuthenticationViewModel.swift in Sources */,
+				ABC0A52429D855EB0021690E /* Landmark.swift in Sources */,
+				ABC122C429DDE1190094CF08 /* NotificationCell.swift in Sources */,
+				ABC122C229DDE0F60094CF08 /* Notification.swift in Sources */,
 				AB5F043029CDEA850061BF28 /* SlotSelectionViewModel.swift in Sources */,
 				AB822AFA29BBA27D00CB4CDA /* User.swift in Sources */,
 				AB5DF82929C6C5A300691BBA /* CheckInDetailView.swift in Sources */,
+				ABC122CA29DF18210094CF08 /* CustomButtonView.swift in Sources */,
 				AB822B0129BC4BEA00CB4CDA /* CustomSecuredTextField.swift in Sources */,
+				ABC0A51E29D855B90021690E /* CustomMapView.swift in Sources */,
+				ABC122DE29E6D7350094CF08 /* CustomTimePickerView.swift in Sources */,
 				AB822AF829BBA24100CB4CDA /* Constants.swift in Sources */,
 				AB5DF82D29C6DD7800691BBA /* CheckBoxView.swift in Sources */,
+				AB533DB029F42B2C00C49874 /* LocationPreviewView.swift in Sources */,
 				AB822AD529BB9D2200CB4CDA /* CheckInDetailViewModel.swift in Sources */,
+				ABC122BE29DDE0C40094CF08 /* NotificationsView.swift in Sources */,
 				AB6C7A0E29CED07E002D71CE /* CheckInDetailviewModel.swift in Sources */,
 				AB822B0829BC4D5700CB4CDA /* ImagePicker.swift in Sources */,
 				AB822B1529BC82FD00CB4CDA /* SalonDetailView.swift in Sources */,
+				ABC0A52029D855C30021690E /* MapView.swift in Sources */,
 				AB822AC929BB9C2800CB4CDA /* ProfileDetailView.swift in Sources */,
+				AB533DBA29FB6EF200C49874 /* NavigationLazyView.swift in Sources */,
 				AB822B0329BC4BFD00CB4CDA /* CustomTextField.swift in Sources */,
+				ABC0A52629D855FB0021690E /* LandmarkAnnotation.swift in Sources */,
+				ABC0A52829D8560E0021690E /* PlaceListView.swift in Sources */,
+				ABC122C829DF13090094CF08 /* SaloonRegistationView.swift in Sources */,
 				AB822AD729BB9D3200CB4CDA /* SalonDetailViewModel.swift in Sources */,
 				AB822AD929BB9D3B00CB4CDA /* ProfileDetailViewModel.swift in Sources */,
 				AB822B1029BC730900CB4CDA /* SalonDetails.swift in Sources */,
 				AB822AC729BB9C1A00CB4CDA /* SalonListView.swift in Sources */,
+				ABC122C629DEA9FF0094CF08 /* AsyncImageView.swift in Sources */,
 				AB5DF82729C1855B00691BBA /* LoadingView.swift in Sources */,
 				AB822B0A29BC51F500CB4CDA /* CustomSegmentView.swift in Sources */,
 				AB822B0E29BC70E300CB4CDA /* Extensions.swift in Sources */,
 				AB5F042C29CCB1950061BF28 /* SlotSelectionView.swift in Sources */,
+				ABC0A52229D855D80021690E /* LocationManager.swift in Sources */,
 				AB6C7A1629CF4E3D002D71CE /* SuccessScreen.swift in Sources */,
 				AB822AD329BB9D1700CB4CDA /* LoginViewModel.swift in Sources */,
 				AB822ADB29BB9D4700CB4CDA /* MoreDetailViewModel.swift in Sources */,
@@ -534,11 +618,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HairDresser/Preview Content\"";
+				DEVELOPMENT_TEAM = B7N28739PP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -551,6 +638,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = lakshmisowjanya.HairDresser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,8 +653,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HairDresser/Preview Content\"";
+				DEVELOPMENT_TEAM = B7N28739PP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
